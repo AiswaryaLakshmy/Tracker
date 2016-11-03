@@ -1,0 +1,12 @@
+<% 
+  signup = {
+    form: {
+      action: user_registration_path,
+      csrf_param: request_forgery_protection_token,
+      csrf_token: form_authenticity_token
+    } 
+  }
+%>
+
+<%= react_component('SignUp', 
+                    { signup: signup.to_json}) %>

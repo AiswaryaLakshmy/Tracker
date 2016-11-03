@@ -1,0 +1,33 @@
+var Login = React.createClass({
+  getInitialState: function () {
+    return JSON.parse(this.props.login);
+  },
+
+  handleLoginSubmit: function ( formData, action ) {
+    $.ajax({
+      data: formData,
+      url: action,
+      type: "POST",
+      dataType: "json",
+      success: function ( data ) {
+        this.setState({ user: data });
+        window.location.reload();
+      }.bind(this),
+      error: function(){
+        window.location.reload();
+      }.bind(this)
+    });
+  },
+
+  render: function () {
+    return (
+      <div className="login-box">
+        <h1>Tracker</h1>
+        <hr />
+        <h2>Login</h2>
+        <LoginForm form={ this.state.form } onLoginSubmit={ this.handleLoginSubmit } />
+        New User? <a href="/users/sign_up">Sign Up</a> here!
+      </div>
+    );
+  }
+});

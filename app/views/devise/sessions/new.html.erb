@@ -1,0 +1,12 @@
+<%
+  login = {
+    form: {
+      action: user_session_path,
+      csrf_param: request_forgery_protection_token,
+      csrf_token: form_authenticity_token
+    }
+  }
+%>
+
+<%= react_component('Login', 
+                    { login: login.to_json }) %>
