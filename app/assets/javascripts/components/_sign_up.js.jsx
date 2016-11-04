@@ -21,12 +21,13 @@ var SignUp = React.createClass({
 
   render: function () {
     return (
-      <div className="signup-box">
-        <h1>Tracker</h1>
+      <div className="login">
+        <h1 className="main-heading">Tracker</h1>
         <hr />
-        <h2>Sign Up</h2>
+        <div className="login-triangle" />
+        <h2 className="login-header">Sign Up</h2>
         <SignupForm form={ this.state.form } onSignupSubmit={ this.handleSignupSubmit } />
-        Already a User? <a href="/users/sign_in">Login</a> here!
+        <p className="new-user">Already a User? <a className="link" href="/users/sign_in">Login</a> here!</p>
       </div>
     );
   }

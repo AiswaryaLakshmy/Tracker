@@ -21,12 +21,13 @@ var Login = React.createClass({
 
   render: function () {
     return (
-      <div className="login-box">
-        <h1>Tracker</h1>
+      <div className="login">
+        <h1 className="main-heading">Tracker</h1>
         <hr />
-        <h2>Login</h2>
+        <div className="login-triangle" />
+        <h2 className="login-header">Log in</h2>
         <LoginForm form={ this.state.form } onLoginSubmit={ this.handleLoginSubmit } />
-        New User? <a href="/users/sign_up">Sign Up</a> here!
+        <p className="new-user">New User? <a className="link" href="/users/sign_up">Sign Up</a> here!</p>
       </div>
     );
   }
