@@ -17,3 +17,5 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+//= require "bootstrap-select.min.js"
+//= require "bootstrap.min.js"

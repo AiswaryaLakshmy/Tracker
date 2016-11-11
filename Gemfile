@@ -30,6 +30,8 @@ gem 'pg'
 
 gem 'react-rails'
 
+gem 'font-awesome-rails'
+
 gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
